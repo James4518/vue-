@@ -9,7 +9,8 @@
 </head>
 <body>
     <div id="app">
-        <child message="hello"></child>
+        <input v-model="msg"></input>
+        <child v-bind:message="msg"></child>
     </div>
     <script src="./main.js"></script>
 </body>

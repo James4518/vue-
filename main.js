@@ -1,5 +1,8 @@
 new Vue({
-    el:"#app"
+    el:"#app",
+    data:{
+        msg:'hello'
+    }
 })
 
 Vue.component('child',{
