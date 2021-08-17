@@ -1,12 +1,15 @@
 new Vue({
     el:"#app",
     data:{
-        msg:'hello'
-    }
+    sites:[
+        {text:'baidu'},
+        {text:'alibaba'},
+        {text:'taobao'}
+    ]}
 })
 
-Vue.component('child',{
-props:["message"],
-template:"<div>{{message}}</div>"
+Vue.component('todo-item',{
+props:["todo"],
+template:"<li>{{todo.text}}</li>"
 })
 
