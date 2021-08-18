@@ -7,13 +7,12 @@
 </head>
 <body>
     <div id="app">
-        <cpn @ziclick='fuclick'></cpn>
+        <cpn></cpn>
+        <button @click='btn'>展示</button>
     </div>
     
     <template id="cpn">
-        <div>
-        <button v-for='item in cars' @click='zi(item)'>{{item.name}}</button>
-        </div>
+        <p>我是子组件</p>
     </template>
     <script src="./main.js"></script>
 </body>
