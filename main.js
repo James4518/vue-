@@ -1,5 +1,10 @@
 const cpn={
     template:"#cpn",
+    data(){
+        return{
+            name:'abcd'
+        }
+    },
     methods:{
         showmessage(){
             console.log("hello")
@@ -14,8 +19,7 @@ new Vue({
     },
     methods:{
         btn(){
-            console.log(this.$children)
-            this.$children[0].showmessage()
+            console.log(this.$refs.a.name)
         }
     }
 })
