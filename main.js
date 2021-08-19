@@ -3,6 +3,7 @@ const child={
     methods:{
         cbtn(){
             console.log(this.$parent.name)
+            console.log(this.$root.name)
         }
     }
 }
@@ -18,6 +19,9 @@ const cpn={
 
 new Vue({
     el:"#app",
+    data(){
+        return{name:"我是vue实例的name"}
+    },
     components:{
         cpn
     }
