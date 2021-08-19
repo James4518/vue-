@@ -8,13 +8,20 @@
 <body>
     <div id="app">
         <cpn></cpn>
-        <cpn ref='a'></cpn>
-        <cpn></cpn>
-        <button @click='btn'>展示</button>
     </div>
-    
+
     <template id="cpn">
+        <div>
+            <p>我是cpn</p>
+            <child></child>
+        </div>  
+    </template>
+    
+    <template id="child">
+        <div>
         <p>我是子组件</p>
+        <button @click='cbtn'>展示</button>
+        </div>
     </template>
     <script src="./main.js"></script>
 </body>

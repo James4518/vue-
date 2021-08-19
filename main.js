@@ -1,25 +1,46 @@
-const cpn={
-    template:"#cpn",
-    data(){
-        return{
-            name:'abcd'
-        }
-    },
+const child={
+    template:'#child',
     methods:{
-        showmessage(){
-            console.log("hello")
+        cbtn(){
+            console.log(this.$parent.name)
         }
     }
 }
+
+const cpn={
+    template:"#cpn",
+    data(){
+        return{name:'我是cpn的name'}
+    },
+    components:{child}
+}
+
 
 new Vue({
     el:"#app",
     components:{
         cpn
-    },
-    methods:{
-        btn(){
-            console.log(this.$refs.a.name)
-        }
     }
 })
+
+// new Vue({
+//     el:"#app",
+//     components:{
+//         cpn:{
+//             template:"#cpn",
+//             data(){
+//                 return{name:'我是cpn的name'}
+//             },
+//             components:{
+//                 child:{
+//                     template:"#child",
+//                     methods:{
+//                     cbtn(){
+//                         console.log(this.$parent.name)
+//                         }
+//                     } 
+//                 }          
+//             }
+//         }
+//     }
+// })
